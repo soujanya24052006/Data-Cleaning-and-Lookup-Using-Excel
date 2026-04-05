@@ -1,83 +1,31 @@
-# Data-Cleaning-and-Lookup-Using-Excel
-Excel project focused on data cleaning, fixing data quality issues, and resolving VLOOKUP errors using proper lookup techniques.
+ # Excel Data Cleaning and VLOOKUP Project
 
- Excel Data Cleaning & Transformation Project
+## Project Overview
 
-##  Project Overview
+In this project, I worked on a production dataset in Excel and solved multiple data quality issues. The main goal was to clean the data and correctly map manager ages using VLOOKUP.
 
-This project focuses on cleaning and transforming a production dataset using Microsoft Excel. The dataset contained multiple data quality issues such as inconsistent values, duplicate entries, and lookup mismatches.
+## Problem Faced
 
-The goal was to standardize the data and ensure accurate mapping using Excel functions like VLOOKUP
+While applying VLOOKUP, some rows were showing #N/A errors even though the manager names looked the same. Also, the dataset had multiple ages for the same manager, which created confusion.
 
-## Problem Statement
+## What I Did
 
-The dataset had the following issues:
+First, I checked the data for inconsistencies and duplicate values. Then I verified whether the names in both sheets were exactly matching.
 
-* Multiple ages for the same manager
-* Missing values (`#N/A`) during lookup
-* Inconsistent data across sheets
-* Lookup failures due to incorrect referencing
-* 
-##  Steps Performed
+I identified that the main issue was with the VLOOKUP range shifting when dragging the formula. To fix this, I locked the table array using absolute references.
 
-### 1. Data Cleaning
+## Formula Used
 
-* Removed inconsistencies in manager names
-* Checked for duplicate entries
-* Standardized data across sheets
-
-### 2. Handling Lookup Errors
-
-* Identified `#N/A` errors in VLOOKUP
-* Fixed lookup issues by:
-
-  * Ensuring exact match of values
-  * Cleaning text using TRIM/CLEAN
-  * Locking table array using `$`
-
-### 3. Correct VLOOKUP Implementation
-
-Used the following formula:
-
-```excel
 =VLOOKUP(D2,Sheet1!$A$2:$B$11,2,FALSE)
-```
 
-### 4. Key Fix Applied
+## Result
 
-* Locked lookup range using `$` to prevent shifting
-* Ensured consistent data mapping from master sheet
+After fixing the issue, all manager ages were correctly mapped and the #N/A errors were removed.
 
----
+## Skills Used
 
-## 📈 Outcome
+Excel, Data Cleaning, VLOOKUP, Data Validation, Debugging
 
-* Successfully mapped correct age for each manager
-* Eliminated `#N/A` errors
-* Improved data consistency and reliability
+## Conclusion
 
-
-## Skills Demonstrated
-
-* Data Cleaning
-* Data Validation
-* Excel Functions (VLOOKUP, TRIM, CLEAN)
-* Debugging Excel Errors
-* Data Transformation
-
-
-##  Future Improvements
-
-* Replace VLOOKUP with XLOOKUP for better performance
-* Automate cleaning using Power Query
-* Add dashboard visualization
-
-
-
-##  Files Included
-
-* `transformation_removing_data_qulity_issues.xlsx`
-
- 
-
- 
+This project helped me understand how small mistakes like not locking the range can lead to major errors, and how to debug them effectively.
